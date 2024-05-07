@@ -1,0 +1,50 @@
+# FiguraGeometrica #
+# Crear constructor y metodos de perimetro #
+
+from math import pi
+
+
+class FiguraGeometrica():
+    def __init__(self):
+        pass
+
+
+class Cuadrado(FiguraGeometrica):
+    def __init__(self, lado):
+        self.lado = lado
+
+    def perimetro(self):
+        return self.lado * 4
+
+
+class Triangulo(FiguraGeometrica):
+    def __init__(self, lado1, lado2, lado3):
+        self.lado1 = lado1
+        self.lado2 = lado2
+        self.lado3 = lado3
+        self.perimetro = lado1 + lado2 + lado3
+
+    def perimetro(self):
+        return self.lado1 + self.lado2 + self.lado3
+
+
+class Cirulo(FiguraGeometrica):
+    def __init__(self, radio):
+        self.radio = radio
+
+    def perimetro(self):
+        return self.radio * pi * 2
+
+
+
+#instanciacion#
+
+c1 = Cuadrado(4)
+print(c1.perimetro())
+
+
+t1 = Triangulo(3, 4, 5)
+print(t1.perimetro())
+
+c1 = Cirulo(0.5)
+print(c1.perimetro())
